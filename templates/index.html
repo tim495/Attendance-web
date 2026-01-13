@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>出勤加班處理</title>
+    <!-- 掛外部 CSS -->
+    <link rel="stylesheet" type="text/css" href="static\css-selector.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>專案加班清洗工具</h2>
+
+        <div class="notice">
+            ⚠️ 注意：本工具 <strong>目前僅支援「鋒形系統匯出之 Excel 格式」</strong><br>
+            若檔案格式、欄位名稱或順序不符，清洗結果將發生錯誤。<br>(上傳的檔名不需一致)</br>
+        </div>
+        
+
+        <form action="/upload" method="post" enctype="multipart/form-data">
+
+
+            <p>
+                <label>全公司出勤明細：</label>
+                <input type="file" name="attendance" accept=".xlsx,.xls" required>
+            </p>
+
+            <p>
+                <label>全公司加班明細表：</label>
+                <input type="file" name="overtime" accept=".xlsx,.xls" required>
+            </p>
+
+
+            <button type="submit"onclick="return confirm('清洗前請確認上傳檔案是否為正確的格式，否則結果會出現錯誤!')">
+                開始清洗
+            </button>        
+        </form>
+        
+    </div>
+
+</body>
+</html>

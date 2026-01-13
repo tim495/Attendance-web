@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+.venv/
+
+# Env
+.env
+
+# OS
+.DS_Store
+
+# Excel / temp
+*.xlsx
+*.xls
+
+# IDE
+.curosor
